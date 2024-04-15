@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  background-color: #fafaf9;
+}
+
+strong {
+  font-weight: 700;
+}
