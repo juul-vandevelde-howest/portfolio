@@ -19,9 +19,11 @@ function About() {
           </p>
         </article>
         <div className="sticky bottom-8 mr-8 flex flex-col text-right text-5xl font-bold">
-          <span>Full</span>
-          <span>Stack</span>
-          <span>Developer</span>
+          Full
+          <br />
+          Stack
+          <br />
+          Developer
         </div>
         <button className="ml-24 h-48 w-48 rounded-full bg-black text-xl text-white">
           Reach out -&gt;
