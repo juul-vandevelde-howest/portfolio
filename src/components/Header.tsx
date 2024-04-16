@@ -1,14 +1,17 @@
 'use client'
 
-import { Sun } from '@phosphor-icons/react'
+import { Moon, Sun } from '@phosphor-icons/react'
 import Link from 'next/link'
+import { useState } from 'react'
 
 function Header() {
-  // TODO: navragen of dit mag
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
 
   function switchTheme() {
+    // TODO: navragen of dit mag
     const element = document.documentElement
     element.classList.toggle('dark')
+    setIsDarkTheme(!isDarkTheme)
   }
 
   return (
@@ -33,7 +36,11 @@ function Header() {
         </ul>
       </nav>
       <button onClick={switchTheme}>
-        <Sun size={32} weight="fill" />
+        {isDarkTheme ? (
+          <Moon size={32} weight="fill" />
+        ) : (
+          <Sun size={32} weight="fill" />
+        )}
       </button>
     </header>
   )
