@@ -24,13 +24,15 @@ function Work({
     <div
       className={`my-20 flex justify-center ${mirror ? 'flex-row-reverse' : 'flex-row'} items-end gap-8`}
     >
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className="w-1/2 rounded-lg"
-      />
+      <div className="w-1/2 overflow-hidden rounded-lg">
+        <Image
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          className="w-full transition duration-500 hover:scale-110"
+        />
+      </div>
       <div className={`${mirror ? 'text-right' : ''}`}>
         <div
           className="pb-2 text-6xl font-bold leading-tight"
