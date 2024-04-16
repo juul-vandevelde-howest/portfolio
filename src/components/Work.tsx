@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 function Work({
   title,
@@ -38,7 +39,14 @@ function Work({
           }}
         ></div>
         <div className="pb-4 text-2xl font-light italic">{description}</div>
-        <div className="text-2xl font-bold">visit repository -&gt;</div>
+        <Link
+          href={link}
+          rel="noopener noreferrer"
+          className="text-2xl font-bold"
+          target="_blank"
+        >
+          visit repository -&gt;
+        </Link>
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ function Works() {
         width={679}
         height={904}
         description="design / development / team project"
-        link=""
+        link="https://github.com/jentlAntheunis/TeamProject-CronicPain"
       />
       <Work
         title="Spotify<br />Playlist Viewer"
@@ -20,7 +20,7 @@ function Works() {
         width={679}
         height={904}
         description="design / development"
-        link=""
+        link="https://github.com/juul-vandevelde-howest/Interaction-Design-Eindopdracht"
         mirror={true}
       />
     </Section>
