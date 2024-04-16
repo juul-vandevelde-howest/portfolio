@@ -1,6 +1,27 @@
+'use client'
+
+import { Check, Copy } from '@phosphor-icons/react'
 import Image from 'next/image'
+import { useState } from 'react'
 
 function About() {
+  const [isHovered, setIsHovered] = useState(false)
+  const [isCopied, setIsCopied] = useState(false)
+
+  const handleMouseEnter = () => {
+    setIsHovered(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovered(false)
+    setIsCopied(false)
+  }
+
+  const handleClick = () => {
+    navigator.clipboard.writeText('vandeveldejuul@protonmail.com')
+    setIsCopied(true)
+  }
+
   return (
     <section id="about" className="mb-20 grid grid-cols-2 pt-20">
       <div>
@@ -25,8 +46,31 @@ function About() {
           <br />
           Developer
         </div>
-        <button className="bg-foreground text-background ml-24 h-48 w-48 rounded-full text-xl">
-          Reach out -&gt;
+        <button
+          className="ml-24 h-48 w-48 rounded-full bg-foreground text-xl text-background"
+          onClick={() => {
+            handleClick()
+          }}
+          onMouseEnter={() => {
+            handleMouseEnter()
+          }}
+          onMouseLeave={() => {
+            handleMouseLeave()
+          }}
+        >
+          {isHovered ? (
+            <div className="flex flex-row items-center justify-center gap-2">
+              {isCopied ? (
+                <>Email copied</>
+              ) : (
+                <>
+                  Copy email <Copy size={24} />
+                </>
+              )}
+            </div>
+          ) : (
+            'Reach out ->'
+          )}
         </button>
       </div>
       <Image
