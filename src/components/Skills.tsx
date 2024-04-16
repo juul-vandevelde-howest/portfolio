@@ -11,7 +11,7 @@ function Skills() {
     {
       name: 'UX/UI Design',
       image: '/assets/ui-design.jpg',
-      span: 'figma / adobe xd / wireframing / user testing',
+      span: 'figma / adobe xd / wireframing / testing',
       alt: 'pastel colored UX wireframes',
     },
     {
@@ -45,12 +45,12 @@ function Skills() {
             alt="A dog with glasses doing work on an ipad"
             width={800}
             height={400}
-            className="mb-2 max-w-3xl rounded"
+            className="mb-2 rounded"
           />
           <span className="text-2xl uppercase italic tracking-widest">
             {currentSkill
               ? currentSkill.span
-              : 'hover over a skill to learn more about it'}
+              : 'hover over a topic to see my skills'}
           </span>
         </div>
         <ul className="cursor-default text-5xl font-bold">

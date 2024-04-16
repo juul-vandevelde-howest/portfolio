@@ -25,21 +25,21 @@ function About() {
   return (
     <section id="about" className="mb-20 grid grid-cols-2 pt-20">
       <div>
-        <article className="m-16 mb-4 flex flex-col gap-20 text-2xl font-light">
-          <p className="max-w-sm">
+        <article className="flex flex-col font-light lg:m-14 lg:mb-3 lg:gap-16 lg:text-xl xl:m-16 xl:mb-4 xl:gap-20 xl:text-2xl">
+          <p className="lg:max-w-xs xl:max-w-sm">
             Multimedia & Creative Technologies <strong>student</strong> based in
             Belgium
           </p>
-          <p className="ml-auto max-w-sm">
+          <p className="ml-auto lg:max-w-xs xl:max-w-sm">
             <strong>Crafting pastries</strong> on weekends while pursuing my
             passion for technology and design
           </p>
-          <p className="max-w-sm">
+          <p className="lg:max-w-xs xl:max-w-sm">
             Driven by a <strong>love for progress</strong>, learning, and
             innovation in every endeavor
           </p>
         </article>
-        <div className="sticky bottom-8 mr-8 flex flex-col text-right text-5xl font-bold">
+        <div className="sticky bottom-8 mr-8 flex flex-col text-right font-bold lg:text-4xl xl:text-5xl">
           Full
           <br />
           Stack
