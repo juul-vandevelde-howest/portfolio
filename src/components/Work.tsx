@@ -22,14 +22,14 @@ function Work({
 }) {
   return (
     <div
-      className={`mx-14 my-20 flex ${mirror ? 'flex-row-reverse' : 'flex-row'} items-end gap-8`}
+      className={`mx-14 my-20 flex justify-center ${mirror ? 'flex-row-reverse' : 'flex-row'} items-end gap-8`}
     >
       <Image
         src={src}
         alt={alt}
         width={width}
         height={height}
-        className="w-2/3 rounded-lg"
+        className="w-1/2 rounded-lg"
       />
       <div className={`${mirror ? 'text-right' : ''}`}>
         <div
