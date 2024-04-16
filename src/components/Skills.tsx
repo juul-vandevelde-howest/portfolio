@@ -4,7 +4,7 @@ import Section from './Section'
 function Skills() {
   return (
     <Section title="WHAT I DO" id="skills">
-      <div className="mx-14 my-20 flex flex-row items-center gap-20">
+      <div className="my-20 flex flex-row justify-center items-center gap-20">
         <div className="w-1/2">
           <Image
             src="/assets/backend-development.png"

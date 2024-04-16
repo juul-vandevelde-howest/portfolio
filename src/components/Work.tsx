@@ -22,7 +22,7 @@ function Work({
 }) {
   return (
     <div
-      className={`mx-14 my-20 flex justify-center ${mirror ? 'flex-row-reverse' : 'flex-row'} items-end gap-8`}
+      className={`my-20 flex justify-center ${mirror ? 'flex-row-reverse' : 'flex-row'} items-end gap-8`}
     >
       <Image
         src={src}
