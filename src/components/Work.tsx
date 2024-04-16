@@ -33,7 +33,7 @@ function Work({
       />
       <div className={`${mirror ? 'text-right' : ''}`}>
         <div
-          className="pb-2 text-6xl font-bold"
+          className="pb-2 text-6xl font-bold leading-tight"
           dangerouslySetInnerHTML={{
             __html: title.replace(/<br\s*\/?>/gi, '<br />'),
           }}

@@ -8,7 +8,7 @@ import Works from '@/components/Works'
 
 export default function Home() {
   return (
-    <main className="px-16 text-foreground bg-background">
+    <main className="px-16 text-foreground bg-background transition-all duration-300">
       <Header />
       <About />
       <Skills />
