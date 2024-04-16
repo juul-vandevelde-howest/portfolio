@@ -5,7 +5,6 @@ import { gsap } from 'gsap'
 function Contact() {
   const [isHovered, setIsHovered] = useState(false)
   const [isCopied, setIsCopied] = useState(false)
-  const [xPercent, setXPercent] = useState(0)
 
   const handleMouseEnter = () => {
     setIsHovered(true)
@@ -26,7 +25,6 @@ function Contact() {
   const thirdText = useRef(null)
   const fourthText = useRef(null)
   const slider = useRef(null)
-
   const xPercentRef = useRef(0)
 
   const animate = useCallback(() => {
