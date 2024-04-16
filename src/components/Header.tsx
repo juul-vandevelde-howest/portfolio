@@ -4,8 +4,15 @@ import { Sun } from '@phosphor-icons/react'
 import Link from 'next/link'
 
 function Header() {
+  // TODO: navragen of dit mag
+
+  function switchTheme() {
+    const element = document.documentElement
+    element.classList.toggle('dark')
+  }
+
   return (
-    <header className="mt-10 flex flex-row items-center">
+    <header className="flex flex-row items-center pt-10">
       <Link href={'/'} className="w-1/2 text-4xl font-bold">
         Juul Van de Velde
       </Link>
@@ -25,7 +32,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <button>
+      <button onClick={switchTheme}>
         <Sun size={32} weight="fill" />
       </button>
     </header>

@@ -7,7 +7,7 @@ function Reviews() {
   return (
     <Section title="WHAT<br />OTHERS SAY" id="reviews">
       <div className="my-20 flex flex-row gap-12 justify-center">
-        <div className="w-1/2 border-2 border-stone-950 p-16">
+        <div className="w-1/2 border-2 border-foreground p-16">
           <div className="pb-12 text-xl">
             Lorem ipsum dolor sit amet consectetur. Massa penatibus pellentesque
             tincidunt est pharetra feugiat. Venenatis a nulla tincidunt velit.
@@ -17,7 +17,7 @@ function Reviews() {
           <div className="text-3xl italic">Mom</div>
         </div>
         <div className="flex w-1/3 flex-col justify-between">
-          <div className="border-2 border-stone-950 p-8">
+          <div className="border-2 border-foreground p-8">
             <div className="pb-12">
               Lorem ipsum dolor sit amet consectetur. Massa penatibus
               pellentesque tincidunt est

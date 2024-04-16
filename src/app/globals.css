@@ -2,12 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scroll-behavior: smooth;
+:root {
+  --foreground: #0c0a09; /* tailwind stone 950 */
+  --background: #fafaf9; /* tailwind stone 50 */
+  --secondary: #a8a29e; /* tailwind stone 400 */
 }
 
-html {
-  background-color: #fafaf9;
+.dark {
+  --foreground: #f5f5f4; /* tailwind stone 100 */
+  --background: #0c0a09; /* tailwind stone 950 */
+  --secondary: #57534e; /* tailwind stone 600 */
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 strong {

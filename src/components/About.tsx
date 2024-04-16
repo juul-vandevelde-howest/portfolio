@@ -25,7 +25,7 @@ function About() {
           <br />
           Developer
         </div>
-        <button className="ml-24 h-48 w-48 rounded-full bg-black text-xl text-white">
+        <button className="bg-foreground text-background ml-24 h-48 w-48 rounded-full text-xl">
           Reach out -&gt;
         </button>
       </div>
