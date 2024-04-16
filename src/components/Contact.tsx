@@ -9,8 +9,6 @@ function Contact() {
   const fourthText = useRef(null)
   const slider = useRef(null)
 
-  //   const [hover, setHover] = useState(false)
-
   let xPercent = 0
 
   useEffect(() => {
@@ -41,7 +39,7 @@ function Contact() {
     gsap.set(thirdText.current, { xPercent: xPercent })
     gsap.set(fourthText.current, { xPercent: xPercent })
     requestAnimationFrame(animate)
-    xPercent += 0.1
+    xPercent += 0.05
   }
 
   return (
@@ -49,12 +47,10 @@ function Contact() {
       ref={slider}
       className="-mx-16 mb-40 flex cursor-pointer overflow-hidden whitespace-nowrap text-8xl font-bold italic"
       onMouseEnter={() => {
-        // setHover(true)
-        // gsap.to(slider.current, { duration: 1, xPercent: -100 })
+        gsap.to(slider.current, { duration: 1, xPercent: -100 })
       }}
       onMouseLeave={() => {
-        // setHover(false)
-        // gsap.to(slider.current, { duration: 1, xPercent: 0 })
+        gsap.to(slider.current, { duration: 1, xPercent: 0 })
       }}
     >
       <p ref={firstText} className="inline-block pr-8">
