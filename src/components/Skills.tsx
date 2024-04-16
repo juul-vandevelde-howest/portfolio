@@ -1,9 +1,9 @@
 import Image from 'next/image'
+import Section from './Section'
 
 function Skills() {
   return (
-    <section id="skills" className="mb-20 h-dvh pt-20">
-      <h1 className="text-8xl font-bold italic">WHAT I DO</h1>
+    <Section title="WHAT I DO" id="skills">
       <div className="mx-14 my-20 flex flex-row items-center gap-20">
         <div className="w-1/2">
           <Image
@@ -32,7 +32,7 @@ function Skills() {
           </li>
         </ul>
       </div>
-    </section>
+    </Section>
   )
 }
 
