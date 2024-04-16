@@ -8,7 +8,7 @@ function Section({
   children: React.ReactNode
 }) {
   return (
-    <section id={id} className="mb-20 h-dvh pt-20">
+    <section id={id} className="mb-20 pt-20">
       <h1
         className="text-8xl font-bold italic"
         dangerouslySetInnerHTML={{
