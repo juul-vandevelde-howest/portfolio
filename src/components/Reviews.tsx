@@ -9,12 +9,9 @@ function Reviews() {
       <div className="my-20 flex flex-row gap-12 justify-center">
         <div className="w-1/2 border-2 border-foreground p-16">
           <div className="pb-12 text-xl">
-            Lorem ipsum dolor sit amet consectetur. Massa penatibus pellentesque
-            tincidunt est pharetra feugiat. Venenatis a nulla tincidunt velit.
-            Imperdiet arcu quisque est sed placerat vitae mauris purus nulla.
-            Enim et integer nullam faucibus nibh ut mauris sagittis.
+          Juul Van de Velde is a web development master, seamlessly blending functionality and design. With expertise in both front-end and back-end technologies, he crafts user-friendly experiences with precision. Juul&apos;s work showcases versatility, innovation, and a commitment to exceeding client expectations.
           </div>
-          <div className="text-3xl italic">Mom</div>
+          <div className="text-3xl italic">ChatGPT</div>
         </div>
         <div className="flex w-1/3 flex-col justify-between">
           <div className="border-2 border-foreground p-8">
@@ -22,7 +19,7 @@ function Reviews() {
               Lorem ipsum dolor sit amet consectetur. Massa penatibus
               pellentesque tincidunt est
             </div>
-            <div className="text-xl italic">ChatGPT</div>
+            <div className="text-xl italic">Mom</div>
           </div>
           <div className="flex flex-row gap-8">
             <button>
