@@ -38,14 +38,14 @@ function Skills() {
 
   return (
     <Section title="WHAT I DO" id="skills">
-      <div className="my-20 flex flex-row items-center justify-center gap-20">
+      <div className="my-20 flex flex-row items-center gap-20">
         <div className="w-1/2">
           <Image
             src={currentSkill ? currentSkill.image : '/assets/doggo.jpg'}
             alt="A dog with glasses doing work on an ipad"
             width={800}
             height={400}
-            className="mb-2 rounded"
+            className="mb-2"
           />
           <span className="text-2xl uppercase italic tracking-widest">
             {currentSkill

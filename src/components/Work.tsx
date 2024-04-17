@@ -22,9 +22,9 @@ function Work({
 }) {
   return (
     <div
-      className={`my-20 flex justify-center ${mirror ? 'flex-row-reverse' : 'flex-row'} items-end gap-8`}
+      className={`my-20 flex ${mirror ? 'flex-row-reverse' : 'flex-row'} items-end gap-8`}
     >
-      <div className="w-1/2 overflow-hidden rounded-lg">
+      <div className="w-1/2 overflow-hidden">
         <Image
           src={src}
           alt={alt}

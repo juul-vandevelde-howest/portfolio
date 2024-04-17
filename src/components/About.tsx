@@ -1,8 +1,9 @@
 'use client'
 
-import { Check, Copy } from '@phosphor-icons/react'
+import { Copy } from '@phosphor-icons/react'
 import Image from 'next/image'
 import { useState } from 'react'
+import Contact from './Contact'
 
 function About() {
   const [isHovered, setIsHovered] = useState(false)
@@ -24,30 +25,42 @@ function About() {
 
   return (
     <section id="about" className="mb-20 grid grid-cols-2 pt-20">
-      <div>
-        <article className="flex flex-col font-light lg:m-14 lg:mb-3 lg:gap-16 lg:text-xl xl:m-16 xl:mb-4 xl:gap-20 xl:text-2xl">
-          <p className="lg:max-w-xs xl:max-w-sm">
-            Multimedia & Creative Technologies <strong>student</strong> based in
+      <div className="mr-8 flex flex-col justify-between">
+        <article className="flex flex-col font-light lg:gap-16 lg:text-xl xl:gap-20 xl:text-2xl">
+          <p>
+            Multimedia & Creative
+            <br />
+            Technologies <strong>student</strong> based in
+            <br />
             Belgium
           </p>
-          <p className="ml-auto lg:max-w-xs xl:max-w-sm">
-            <strong>Crafting pastries</strong> on weekends while pursuing my
-            passion for technology and design
+          <p className="ml-auto inline">
+            <strong>Crafting pastries</strong> on weekends
+            <br />
+            while pursuing my passion for
+            <br />
+            technology and design
           </p>
-          <p className="lg:max-w-xs xl:max-w-sm">
-            Driven by a <strong>love for progress</strong>, learning, and
-            innovation in every endeavor
+          <p>
+            Driven by a <strong>love for progress</strong>,<br />
+            learning, and innovation in every
+            <br />
+            endeavor
           </p>
         </article>
-        <div className="sticky bottom-8 mr-8 flex flex-col text-right font-bold lg:text-4xl xl:text-5xl">
+        <div className="sticky bottom-8 whitespace-nowrap bg-clip-text text-right text-8xl font-bold">
+          FULL STACK DEVELOPER
+        </div>
+        {/* <div className="sticky bottom-8  flex flex-col text-right font-bold lg:text-4xl xl:text-5xl">
           Full
           <br />
           Stack
           <br />
           Developer
-        </div>
-        <button
-          className="ml-24 h-48 w-48 rounded-full bg-foreground text-xl text-background"
+        </div> */}
+        {/* <Contact /> */}
+        {/* <button
+          className="flex flex-row items-center justify-start whitespace-nowrap text-8xl font-bold italic"
           onClick={() => {
             handleClick()
           }}
@@ -59,19 +72,19 @@ function About() {
           }}
         >
           {isHovered ? (
-            <div className="flex flex-row items-center justify-center gap-2">
+            <div className="flex flex-row items-center justify-start gap-5">
               {isCopied ? (
-                <>Email copied</>
+                'EMAIL COPIED :)'
               ) : (
                 <>
-                  Copy email <Copy size={24} />
+                  COPY EMAIL <Copy size={96} weight="fill" />
                 </>
               )}
             </div>
           ) : (
-            'Reach out ->'
+            'REACH OUT ->'
           )}
-        </button>
+        </button> */}
       </div>
       <Image
         src="/assets/juul.png"

@@ -39,12 +39,12 @@ function Reviews() {
 
   return (
     <Section title="WHAT<br />OTHERS SAY" id="reviews">
-      <div className="mb-40 mt-20 flex flex-row justify-center gap-12">
+      <div className="mb-40 mt-20 flex flex-row gap-12">
         <div className="w-1/2 border-2 border-foreground p-16">
           <div className="pb-12 text-xl">{reviews[currentIndex].text}</div>
           <div className="text-3xl italic">{reviews[currentIndex].author}</div>
         </div>
-        <div className="flex w-1/3 flex-col justify-between">
+        <div className="flex w-1/2 flex-col justify-between">
           <div className="border-2 border-foreground p-8">
             <div className="bg-gradient-to-b from-foreground to-60% bg-clip-text pb-12 text-transparent">
               {reviews[(currentIndex + 1) % reviews.length].text

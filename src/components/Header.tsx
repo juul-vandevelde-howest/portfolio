@@ -8,7 +8,6 @@ function Header() {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 
   function switchTheme() {
-    // TODO: navragen of dit mag
     const element = document.documentElement
     element.classList.toggle('dark')
     setIsDarkTheme(!isDarkTheme)
@@ -34,14 +33,14 @@ function Header() {
             <a href="#reviews">Reviews</a>
           </li>
         </ul>
+        <button onClick={switchTheme}>
+          {isDarkTheme ? (
+            <Moon size={32} weight="fill" />
+          ) : (
+            <Sun size={32} weight="fill" />
+          )}
+        </button>
       </nav>
-      <button onClick={switchTheme}>
-        {isDarkTheme ? (
-          <Moon size={32} weight="fill" />
-        ) : (
-          <Sun size={32} weight="fill" />
-        )}
-      </button>
     </header>
   )
 }
