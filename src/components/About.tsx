@@ -49,33 +49,33 @@ function About() {
         </article>
         <div className="text-gradient absolute z-50 w-full whitespace-nowrap pt-20 text-8xl font-bold uppercase italic">
           full stack developer
+          <button
+            className="mt-20 flex flex-row items-center justify-start whitespace-nowrap text-5xl font-bold italic"
+            onClick={() => {
+              handleClick()
+            }}
+            onMouseEnter={() => {
+              handleMouseEnter()
+            }}
+            onMouseLeave={() => {
+              handleMouseLeave()
+            }}
+          >
+            {isHovered ? (
+              <div className="flex flex-row items-center justify-start gap-2 uppercase">
+                {isCopied ? (
+                  'email copied :)'
+                ) : (
+                  <>
+                    copy email <Copy size={46} weight="fill" />
+                  </>
+                )}
+              </div>
+            ) : (
+              <div className="uppercase">reach out -&gt;</div>
+            )}
+          </button>
         </div>
-        <button
-          className="absolute bottom-0 left-0 flex flex-row items-center justify-start whitespace-nowrap text-5xl font-bold italic"
-          onClick={() => {
-            handleClick()
-          }}
-          onMouseEnter={() => {
-            handleMouseEnter()
-          }}
-          onMouseLeave={() => {
-            handleMouseLeave()
-          }}
-        >
-          {isHovered ? (
-            <div className="flex flex-row items-center justify-start gap-2">
-              {isCopied ? (
-                'EMAIL COPIED :)'
-              ) : (
-                <>
-                  COPY EMAIL <Copy size={48} weight="fill" />
-                </>
-              )}
-            </div>
-          ) : (
-            'REACH OUT ->'
-          )}
-        </button>
       </div>
       <Image
         src="/assets/juul.png"
