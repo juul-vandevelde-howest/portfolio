@@ -27,10 +27,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-.dark .text-gradient {
-  background-position: 0 0;
-}
-
 * {
   scroll-behavior: smooth;
 }

@@ -10,8 +10,6 @@ export const metadata: Metadata = {
     'Full Stack Developer student from Belgium, passionate about technology and design. Driven by a love for progress and innovation. Seeking internship opportunities in web development.',
 }
 
-// TODO: Add a favicon
-
 export default function RootLayout({
   children,
 }: Readonly<{

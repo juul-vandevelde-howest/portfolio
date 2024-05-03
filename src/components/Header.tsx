@@ -15,11 +15,14 @@ function Header() {
 
   return (
     <header className="flex flex-row items-center pt-10">
-      <Link href={'/'} className="w-1/2 font-bold lg:text-3xl xl:text-4xl">
+      <Link
+        href={'/'}
+        className="w-1/2 font-bold md:text-2xl lg:text-3xl xl:text-4xl"
+      >
         Juul Van de Velde
       </Link>
-      <nav className="flex w-1/2 flex-row justify-between">
-        <ul className="flex flex-row gap-8 font-medium lg:text-lg xl:text-xl">
+      <nav className="hidden w-1/2 flex-row justify-between sm:flex">
+        <ul className="md:text-md flex flex-row font-medium sm:gap-5 md:gap-8 lg:text-lg xl:text-xl">
           <li className="hover:underline">
             <a href="#about">About</a>
           </li>
@@ -35,9 +38,23 @@ function Header() {
         </ul>
         <button onClick={switchTheme}>
           {isDarkTheme ? (
-            <Moon size={32} weight="fill" />
+            <>
+              <Moon
+                size={24}
+                weight="fill"
+                className="inline-block lg:hidden"
+              />
+              <Moon
+                size={32}
+                weight="fill"
+                className="hidden lg:inline-block"
+              />
+            </>
           ) : (
-            <Sun size={32} weight="fill" />
+            <>
+              <Sun size={24} weight="fill" className="inline-block lg:hidden" />
+              <Sun size={32} weight="fill" className="hidden lg:inline-block" />
+            </>
           )}
         </button>
       </nav>

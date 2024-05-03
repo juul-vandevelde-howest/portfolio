@@ -38,7 +38,7 @@ function Skills() {
 
   return (
     <Section title="what i do" id="skills">
-      <div className="my-20 flex flex-row items-center gap-20">
+      <div className="flex flex-row items-center sm:my-12 sm:gap-9 md:my-14 md:gap-14 lg:my-16 lg:gap-16 xl:my-20 xl:gap-20">
         <div className="w-1/2">
           <Image
             src={currentSkill ? currentSkill.image : '/assets/doggo.jpg'}
@@ -47,17 +47,17 @@ function Skills() {
             height={400}
             className="mb-2"
           />
-          <span className="uppercase italic tracking-widest lg:text-xl xl:text-2xl">
+          <span className="uppercase italic tracking-widest lg:text-lg xl:text-2xl text-nowrap">
             {currentSkill
               ? currentSkill.span
               : 'hover over a topic to see my skills'}
           </span>
         </div>
-        <ul className="cursor-default font-bold lg:text-4xl xl:text-5xl">
+        <ul className="cursor-default font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           {skills.map(skill => (
             <li
               key={skill.name}
-              className="py-4 text-secondary hover:text-foreground"
+              className="text-secondary hover:text-foreground sm:py-2 md:py-3 lg:py-4"
               onMouseEnter={() => setCurrentHover(skill.name)}
               onMouseLeave={() => setCurrentHover(null)}
             >

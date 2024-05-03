@@ -12,7 +12,7 @@ function Reviews() {
 
   const reviews: Review[] = [
     {
-      text: 'For our new website, we had contacted Juul Van de Velde. He sensed perfectly what we wanted and quickly came up with a beautiful design. For us it was important that the customer can clearly see that we deliver a premium product and that feeling had to be reflected in the website. No maze but simplicity and a clear message, if you want a heat pump you have to come to us 😊 In this he succeeded very well.  People are finding their way to our product and the new site has given an extra boost to our sales.',
+      text: 'For our new website, we had contacted Juul Van de Velde. He sensed perfectly what we wanted and quickly came up with a beautiful design. For us it was important that the customer can clearly see that we deliver a premium product and that feeling had to be reflected in the website. No maze but simplicity and a clear message, if you want a heat pump you have to come to us 😊 In this he succeeded very well. People are finding their way to our product and the new site has given an extra boost to our sales.',
       author: 'Ecoterm WP',
     },
     {
@@ -39,12 +39,12 @@ function Reviews() {
 
   return (
     <Section title="what<br />others say" id="reviews">
-      <div className="mb-40 mt-20 flex flex-row gap-12">
-        <div className="w-7/12 border-2 border-foreground p-16">
-          <div className="pb-12 lg:text-lg xl:text-xl">
+      <div className="flex flex-row sm:mb-24 sm:mt-12 sm:gap-6 md:mb-28 md:mt-14 md:gap-8 lg:mb-32 lg:mt-16 lg:gap-10 xl:mb-40 xl:mt-20 xl:gap-12">
+        <div className="w-7/12 border-2 border-foreground sm:p-10 md:p-11 lg:p-12 xl:p-16">
+          <div className="sm:pb-8 md:pb-9 md:text-base lg:pb-10 lg:text-lg xl:pb-12 xl:text-xl">
             {reviews[currentIndex].text}
           </div>
-          <div className="italic lg:text-2xl xl:text-3xl">
+          <div className="italic sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
             {reviews[currentIndex].author}
           </div>
         </div>

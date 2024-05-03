@@ -23,9 +23,12 @@ function About() {
   }
 
   return (
-    <section id="about" className="relative mb-20 grid grid-cols-2 pt-20">
+    <section
+      id="about"
+      className="relative grid grid-cols-2 pt-20 md:mb-14 lg:mb-16 xl:mb-20"
+    >
       <div className="mr-8">
-        <article className="flex flex-col font-light lg:gap-16 lg:text-xl xl:gap-20 xl:text-2xl">
+        <article className="flex flex-col font-light sm:gap-10 md:gap-14 md:text-lg lg:gap-16 lg:text-xl xl:gap-20 xl:text-2xl">
           <p>
             Multimedia & Creative
             <br />
@@ -47,9 +50,9 @@ function About() {
             endeavor
           </p>
         </article>
-        <div className="text-gradient absolute z-50 w-full whitespace-nowrap font-bold uppercase italic lg:pt-14 lg:text-7xl xl:pt-20 xl:text-8xl">
+        <div className="text-gradient absolute z-50 w-full whitespace-nowrap font-bold uppercase italic sm:pt-10 sm:text-5xl md:pt-14 md:text-6xl lg:pt-16 lg:text-7xl xl:pt-20 xl:text-8xl">
           full stack developer
-          <button
+          {/* <button
             className="flex flex-row items-center justify-start whitespace-nowrap font-bold italic lg:mt-14 lg:text-4xl xl:mt-20 xl:text-5xl"
             onClick={() => {
               handleClick()
@@ -74,7 +77,7 @@ function About() {
             ) : (
               <div className="uppercase">reach out -&gt;</div>
             )}
-          </button>
+          </button> */}
         </div>
       </div>
       <Image
