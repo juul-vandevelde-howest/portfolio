@@ -10,7 +10,7 @@ function Section({
   return (
     <section id={id} className="mb-20 pt-20">
       <h1
-        className="text-8xl font-bold italic"
+        className="font-bold italic lg:text-7xl xl:text-8xl uppercase"
         dangerouslySetInnerHTML={{
           __html: title.replace(/<br\s*\/?>/gi, '<br />'),
         }}

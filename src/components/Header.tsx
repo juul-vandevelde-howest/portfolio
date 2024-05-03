@@ -15,11 +15,11 @@ function Header() {
 
   return (
     <header className="flex flex-row items-center pt-10">
-      <Link href={'/'} className="w-1/2 text-4xl font-bold">
+      <Link href={'/'} className="w-1/2 font-bold lg:text-3xl xl:text-4xl">
         Juul Van de Velde
       </Link>
       <nav className="flex w-1/2 flex-row justify-between">
-        <ul className="flex flex-row gap-8 text-xl font-medium">
+        <ul className="flex flex-row gap-8 font-medium lg:text-lg xl:text-xl">
           <li className="hover:underline">
             <a href="#about">About</a>
           </li>

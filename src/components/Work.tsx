@@ -35,16 +35,18 @@ function Work({
       </div>
       <div className={`${mirror ? 'text-right' : ''}`}>
         <div
-          className="pb-2 text-6xl font-bold leading-tight"
+          className="pb-2 font-bold leading-tight lg:text-5xl xl:text-6xl"
           dangerouslySetInnerHTML={{
             __html: title.replace(/<br\s*\/?>/gi, '<br />'),
           }}
         ></div>
-        <div className="pb-4 text-2xl font-light italic">{description}</div>
+        <div className="pb-4 font-light italic lg:text-xl xl:text-2xl">
+          {description}
+        </div>
         <Link
           href={link}
           rel="noopener noreferrer"
-          className="text-2xl font-bold hover:underline"
+          className="font-bold hover:underline lg:text-xl xl:text-2xl"
           target="_blank"
         >
           visit repository -&gt;

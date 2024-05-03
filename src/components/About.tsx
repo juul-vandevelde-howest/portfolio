@@ -47,10 +47,10 @@ function About() {
             endeavor
           </p>
         </article>
-        <div className="text-gradient absolute z-50 w-full whitespace-nowrap pt-20 text-8xl font-bold uppercase italic">
+        <div className="text-gradient absolute z-50 w-full whitespace-nowrap font-bold uppercase italic lg:pt-14 lg:text-7xl xl:pt-20 xl:text-8xl">
           full stack developer
           <button
-            className="mt-20 flex flex-row items-center justify-start whitespace-nowrap text-5xl font-bold italic"
+            className="flex flex-row items-center justify-start whitespace-nowrap font-bold italic lg:mt-14 lg:text-4xl xl:mt-20 xl:text-5xl"
             onClick={() => {
               handleClick()
             }}

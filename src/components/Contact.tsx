@@ -65,7 +65,7 @@ function Contact() {
   return (
     <div
       ref={slider}
-      className={`mb-40 flex cursor-pointer overflow-hidden whitespace-nowrap text-8xl font-bold italic ${isHovered && 'justify-center'}`}
+      className={`mb-40 flex cursor-pointer overflow-hidden whitespace-nowrap font-bold italic lg:text-7xl xl:text-8xl ${isHovered && 'justify-center'}`}
       onMouseEnter={() => {
         handleMouseEnter()
       }}

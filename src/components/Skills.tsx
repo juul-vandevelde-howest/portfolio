@@ -37,7 +37,7 @@ function Skills() {
   const currentSkill = skills.find(skill => skill.name === currentHover)
 
   return (
-    <Section title="WHAT I DO" id="skills">
+    <Section title="what i do" id="skills">
       <div className="my-20 flex flex-row items-center gap-20">
         <div className="w-1/2">
           <Image
@@ -47,13 +47,13 @@ function Skills() {
             height={400}
             className="mb-2"
           />
-          <span className="text-2xl uppercase italic tracking-widest">
+          <span className="uppercase italic tracking-widest lg:text-xl xl:text-2xl">
             {currentSkill
               ? currentSkill.span
               : 'hover over a topic to see my skills'}
           </span>
         </div>
-        <ul className="cursor-default text-5xl font-bold">
+        <ul className="cursor-default font-bold lg:text-4xl xl:text-5xl">
           {skills.map(skill => (
             <li
               key={skill.name}

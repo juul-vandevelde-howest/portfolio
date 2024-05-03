@@ -38,11 +38,15 @@ function Reviews() {
   }
 
   return (
-    <Section title="WHAT<br />OTHERS SAY" id="reviews">
+    <Section title="what<br />others say" id="reviews">
       <div className="mb-40 mt-20 flex flex-row gap-12">
         <div className="w-7/12 border-2 border-foreground p-16">
-          <div className="pb-12 text-xl">{reviews[currentIndex].text}</div>
-          <div className="text-3xl italic">{reviews[currentIndex].author}</div>
+          <div className="pb-12 lg:text-lg xl:text-xl">
+            {reviews[currentIndex].text}
+          </div>
+          <div className="italic lg:text-2xl xl:text-3xl">
+            {reviews[currentIndex].author}
+          </div>
         </div>
         <div className="flex w-5/12 flex-col justify-between">
           <div className="border-2 border-foreground p-8">
@@ -54,7 +58,7 @@ function Reviews() {
                 .join(' ')}{' '}
               ...
             </div>
-            <div className="text-xl italic">
+            <div className="italic lg:text-lg xl:text-xl">
               {reviews[(currentIndex + 1) % reviews.length].author}
             </div>
           </div>

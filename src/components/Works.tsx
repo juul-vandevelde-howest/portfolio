@@ -3,7 +3,7 @@ import Work from './Work'
 
 function Works() {
   return (
-    <Section title="RECENT<br />PROJECTS" id="works">
+    <Section title="recent<br />projects" id="works">
       <Work
         title="Pebbles"
         src="/assets/pebbles-mockup.jpg"
