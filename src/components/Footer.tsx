@@ -11,7 +11,7 @@ function Footer() {
           href="https://www.linkedin.com/in/juul-vandevelde/"
           rel="noopener noreferrer"
           target="_blank"
-          className="text-xl"
+          className="text-xl hover:underline"
         >
           LinkedIn
         </Link>
@@ -19,7 +19,7 @@ function Footer() {
           href="https://github.com/juul-vandevelde-howest"
           rel="noopener noreferrer"
           target="_blank"
-          className="text-xl"
+          className="text-xl hover:underline"
         >
           Github
         </Link>

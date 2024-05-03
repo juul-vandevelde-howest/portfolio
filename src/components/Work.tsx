@@ -44,7 +44,7 @@ function Work({
         <Link
           href={link}
           rel="noopener noreferrer"
-          className="text-2xl font-bold"
+          className="text-2xl font-bold hover:underline"
           target="_blank"
         >
           visit repository -&gt;

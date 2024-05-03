@@ -35,9 +35,9 @@
   scroll-behavior: smooth;
 }
 
-/* html {
+html {
   background-color: var(--background);
-} */
+}
 
 strong {
   font-weight: 700;

@@ -20,16 +20,16 @@ function Header() {
       </Link>
       <nav className="flex w-1/2 flex-row justify-between">
         <ul className="flex flex-row gap-8 text-xl font-medium">
-          <li>
+          <li className="hover:underline">
             <a href="#about">About</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="#skills">Skills</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="#works">Works</a>
           </li>
-          <li>
+          <li className="hover:underline">
             <a href="#reviews">Reviews</a>
           </li>
         </ul>
