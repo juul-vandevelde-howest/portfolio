@@ -12,16 +12,16 @@ function Reviews() {
 
   const reviews: Review[] = [
     {
-      text: "Juul Van de Velde is a web development master, seamlessly blending functionality and design. With expertise in both front-end and back-end technologies, he crafts user-friendly experiences with precision. Juul's work showcases versatility, innovation, and a commitment to exceeding client expectations.",
-      author: 'ChatGPT',
+      text: 'For our new website, we had contacted Juul Van de Velde. He sensed perfectly what we wanted and quickly came up with a beautiful design. For us it was important that the customer can clearly see that we deliver a premium product and that feeling had to be reflected in the website. No maze but simplicity and a clear message, if you want a heat pump you have to come to us 😊 In this he succeeded very well.  People are finding their way to our product and the new site has given an extra boost to our sales.',
+      author: 'Ecoterm WP',
     },
     {
       text: 'Juul is the ideal help in building your website. He creates calm and confidence. He brings your message to its essence. In all simplicity, pure, clear and contemporary. He is a professional in optimizing, taking security into account.',
       author: 'Mom',
     },
     {
-      text: 'For our new website, we had contacted Juul Van de Velde. He sensed perfectly what we wanted and quickly came up with a beautiful design. For us it was important that the customer can clearly see that we deliver a premium product and that feeling had to be reflected in the website. No maze but simplicity and a clear message, if you want a heat pump you have to come to us 😊 In this he succeeded very well.  People are finding their way to our product and the new site has given an extra boost to our sales.',
-      author: 'Ecoterm WP',
+      text: "Juul Van de Velde is a web development master, seamlessly blending functionality and design. With expertise in both front-end and back-end technologies, he crafts user-friendly experiences with precision. Juul's work showcases versatility, innovation, and a commitment to exceeding client expectations.",
+      author: 'ChatGPT',
     },
   ]
 
