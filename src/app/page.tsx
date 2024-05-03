@@ -8,15 +8,16 @@ import Works from '@/components/Works'
 
 export default function Home() {
   return (
-    // TODO: padding x-16 zonder scroll te verpesten
-    <main className="mx-auto max-w-screen-2xl bg-background px-16 text-foreground transition-all duration-300">
-      <Header />
-      <About />
-      <Skills />
-      <Works />
-      <Reviews />
-      <Contact />
-      <Footer />
+    <main className="bg-background text-foreground">
+      <div className="mx-auto max-w-screen-2xl px-16  transition-all duration-300">
+        <Header />
+        <About />
+        <Skills />
+        <Works />
+        <Reviews />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   )
 }

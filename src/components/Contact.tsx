@@ -75,22 +75,22 @@ function Contact() {
     >
       {!isHovered ? (
         <>
-          <p ref={firstText} className="m-0 inline-block pr-8">
-            REACH OUT -
+          <p ref={firstText} className="m-0 inline-block pr-8 uppercase">
+            reach out -
           </p>
-          <p ref={secondText} className="m-0 inline-block pr-8">
-            REACH OUT -
+          <p ref={secondText} className="m-0 inline-block pr-8 uppercase">
+            reach out -
           </p>
-          <p ref={thirdText} className="m-0 inline-block pr-8">
-            REACH OUT -
+          <p ref={thirdText} className="m-0 inline-block pr-8 uppercase">
+            reach out -
           </p>
-          <p ref={fourthText} className="m-0 inline-block pr-8">
-            REACH OUT -
+          <p ref={fourthText} className="m-0 inline-block pr-8 uppercase">
+            reach out -
           </p>
         </>
       ) : (
-        <button className="w-full italic" onClick={handleClick}>
-          {isCopied ? 'EMAIL COPIED :)' : 'CLICK TO COPY EMAIL'}
+        <button className="w-full uppercase italic" onClick={handleClick}>
+          {isCopied ? 'email copied :)' : 'click to copy email'}
         </button>
       )}
     </div>

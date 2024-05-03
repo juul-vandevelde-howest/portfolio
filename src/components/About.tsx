@@ -3,7 +3,6 @@
 import { Copy } from '@phosphor-icons/react'
 import Image from 'next/image'
 import { useState } from 'react'
-import Contact from './Contact'
 
 function About() {
   const [isHovered, setIsHovered] = useState(false)
@@ -24,8 +23,8 @@ function About() {
   }
 
   return (
-    <section id="about" className="mb-20 grid grid-cols-2 pt-20">
-      <div className="mr-8 flex flex-col justify-between">
+    <section id="about" className="relative mb-20 grid grid-cols-2 pt-20">
+      <div className="mr-8">
         <article className="flex flex-col font-light lg:gap-16 lg:text-xl xl:gap-20 xl:text-2xl">
           <p>
             Multimedia & Creative
@@ -48,19 +47,11 @@ function About() {
             endeavor
           </p>
         </article>
-        <div className="sticky bottom-8 whitespace-nowrap bg-clip-text text-right text-8xl font-bold">
-          FULL STACK DEVELOPER
+        <div className="text-gradient absolute z-50 w-full whitespace-nowrap pt-20 text-8xl font-bold uppercase italic">
+          full stack developer
         </div>
-        {/* <div className="sticky bottom-8  flex flex-col text-right font-bold lg:text-4xl xl:text-5xl">
-          Full
-          <br />
-          Stack
-          <br />
-          Developer
-        </div> */}
-        {/* <Contact /> */}
-        {/* <button
-          className="flex flex-row items-center justify-start whitespace-nowrap text-8xl font-bold italic"
+        <button
+          className="absolute bottom-0 left-0 flex flex-row items-center justify-start whitespace-nowrap text-5xl font-bold italic"
           onClick={() => {
             handleClick()
           }}
@@ -72,19 +63,19 @@ function About() {
           }}
         >
           {isHovered ? (
-            <div className="flex flex-row items-center justify-start gap-5">
+            <div className="flex flex-row items-center justify-start gap-2">
               {isCopied ? (
                 'EMAIL COPIED :)'
               ) : (
                 <>
-                  COPY EMAIL <Copy size={96} weight="fill" />
+                  COPY EMAIL <Copy size={48} weight="fill" />
                 </>
               )}
             </div>
           ) : (
             'REACH OUT ->'
           )}
-        </button> */}
+        </button>
       </div>
       <Image
         src="/assets/juul.png"
