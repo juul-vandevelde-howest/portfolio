@@ -2,6 +2,7 @@ import Section from './Section'
 import Work from './Work'
 import pebbles from '../../public/assets/pebbles-mockup.jpg'
 import spotify from '../../public/assets/spotify-playlist-viewer-mockup.jpg'
+import flashcards from '../../public/assets/flashcards-mockup.jpg'
 
 function Works() {
   return (
@@ -20,6 +21,13 @@ function Works() {
         description="design / development"
         link="https://github.com/juul-vandevelde-howest/Interaction-Design-Eindopdracht"
         mirror={true}
+      />
+      <Work
+        title="Flashcards App"
+        src={flashcards}
+        alt="Mockup of a Flashcards App"
+        description="design / development"
+        link="https://github.com/juul-vandevelde-howest/smartAppDev-eindopdracht"
       />
     </Section>
   )
