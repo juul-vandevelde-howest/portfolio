@@ -39,22 +39,30 @@ function Skills() {
     },
   ]
 
-  const currentSkill = skills.find(skill => skill.name === currentHover)
-
   return (
     <Section title="what i do" id="skills">
       <div className="flex flex-row items-center sm:my-12 sm:gap-9 md:my-14 md:gap-14 lg:my-16 lg:gap-16 xl:my-20 xl:gap-20">
         <div className="w-1/2">
+          {skills.map(skill => (
+            <Image
+              key={skill.name}
+              src={skill.image}
+              alt={skill.alt}
+              className={`mb-2 ${currentHover === skill.name ? 'block' : 'hidden'}`}
+              placeholder="blur"
+              priority={true}
+            />
+          ))}
           <Image
-            src={currentSkill ? currentSkill.image : dog}
+            src={dog}
             alt="A dog with glasses doing work on an ipad"
-            className="mb-2"
+            className={`mb-2 ${currentHover ? 'hidden' : 'block'}`}
             placeholder="blur"
             priority={true}
           />
           <span className="text-nowrap uppercase italic tracking-widest lg:text-lg xl:text-2xl">
-            {currentSkill
-              ? currentSkill.span
+            {currentHover
+              ? skills.find(skill => skill.name === currentHover)?.span
               : 'hover over a topic to see my skills'}
           </span>
         </div>
