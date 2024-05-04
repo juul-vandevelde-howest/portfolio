@@ -50,6 +50,7 @@ function Skills() {
             alt="A dog with glasses doing work on an ipad"
             className="mb-2"
             placeholder="blur"
+            priority={true}
           />
           <span className="text-nowrap uppercase italic tracking-widest lg:text-lg xl:text-2xl">
             {currentSkill
