@@ -3,6 +3,7 @@
 import { Copy } from '@phosphor-icons/react'
 import Image from 'next/image'
 import { useState } from 'react'
+import foldImage from '../../public/assets/juul.png'
 
 function About() {
   const [isHovered, setIsHovered] = useState(false)
@@ -81,10 +82,8 @@ function About() {
         </div>
       </div>
       <Image
-        src="/assets/juul.png"
+        src={foldImage}
         alt="Picture of Juul Van de Velde working in a bakery"
-        width={679}
-        height={904}
         priority={true}
         className="w-full object-cover"
       />

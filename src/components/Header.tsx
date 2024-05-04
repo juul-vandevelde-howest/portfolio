@@ -36,7 +36,7 @@ function Header() {
             <a href="#reviews">Reviews</a>
           </li>
         </ul>
-        <button onClick={switchTheme}>
+        <button onClick={switchTheme} aria-label="Toggle Dark/Light Mode">
           {isDarkTheme ? (
             <>
               <Moon

@@ -1,21 +1,17 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 function Work({
   title,
   src,
   alt,
-  width,
-  height,
   description,
   link,
   mirror = false,
 }: {
   title: string
-  src: string
+  src: StaticImageData
   alt: string
-  width: number
-  height: number
   description: string
   link: string
   mirror?: boolean
@@ -28,8 +24,6 @@ function Work({
         <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
           className="w-full transition duration-500 hover:scale-110"
         />
       </div>

@@ -63,10 +63,10 @@ function Reviews() {
             </div>
           </div>
           <div className="flex flex-row gap-8">
-            <button onClick={handlePrevious}>
+            <button onClick={handlePrevious} aria-label="Previous review">
               <ArrowLeft size={64} />
             </button>
-            <button onClick={handleNext}>
+            <button onClick={handleNext} aria-label="Next review">
               <ArrowRight size={64} />
             </button>
           </div>

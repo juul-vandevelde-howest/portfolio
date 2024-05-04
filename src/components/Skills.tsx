@@ -3,6 +3,11 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Section from './Section'
+import UIUX from '../../public/assets/ui-design.jpg'
+import dog from '../../public/assets/doggo.jpg'
+import frontend from '../../public/assets/frontend.jpg'
+import backend from '../../public/assets/backend.png'
+import flutter from '../../public/assets/flutter.jpg'
 
 function Skills() {
   const [currentHover, setCurrentHover] = useState<string | null>(null)
@@ -10,25 +15,25 @@ function Skills() {
   const skills = [
     {
       name: 'UX/UI Design',
-      image: '/assets/ui-design.jpg',
+      image: UIUX,
       span: 'figma / adobe xd / wireframing / testing',
       alt: 'pastel colored UX wireframes',
     },
     {
       name: 'Frontend Development',
-      image: '/assets/frontend.jpg',
+      image: frontend,
       span: 'html / css / typescript / react / next.js',
       alt: 'A laptop showing a code editor with a website design',
     },
     {
       name: 'Backend Development',
-      image: '/assets/backend.png',
+      image: backend,
       span: '.net / azure / firebase / node.js',
       alt: 'An AI generated image of a data center',
     },
     {
       name: 'Flutter Development',
-      image: '/assets/flutter.jpg',
+      image: flutter,
       span: 'dart / flutter',
       alt: 'A laptop and a phone showing a flutter app design',
     },
@@ -41,13 +46,11 @@ function Skills() {
       <div className="flex flex-row items-center sm:my-12 sm:gap-9 md:my-14 md:gap-14 lg:my-16 lg:gap-16 xl:my-20 xl:gap-20">
         <div className="w-1/2">
           <Image
-            src={currentSkill ? currentSkill.image : '/assets/doggo.jpg'}
+            src={currentSkill ? currentSkill.image : dog}
             alt="A dog with glasses doing work on an ipad"
-            width={800}
-            height={400}
             className="mb-2"
           />
-          <span className="uppercase italic tracking-widest lg:text-lg xl:text-2xl text-nowrap">
+          <span className="text-nowrap uppercase italic tracking-widest lg:text-lg xl:text-2xl">
             {currentSkill
               ? currentSkill.span
               : 'hover over a topic to see my skills'}
@@ -57,7 +60,7 @@ function Skills() {
           {skills.map(skill => (
             <li
               key={skill.name}
-              className="text-secondary hover:text-foreground sm:py-2 md:py-3 lg:py-4"
+              className="text-stone-500 hover:text-foreground sm:py-2 md:py-3 lg:py-4"
               onMouseEnter={() => setCurrentHover(skill.name)}
               onMouseLeave={() => setCurrentHover(null)}
             >

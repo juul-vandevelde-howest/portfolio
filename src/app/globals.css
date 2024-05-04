@@ -5,13 +5,11 @@
 :root {
   --foreground: #0c0a09; /* tailwind stone 950 */
   --background: #fafaf9; /* tailwind stone 50 */
-  --secondary: #a8a29e; /* tailwind stone 400 */
 }
 
 .dark {
   --foreground: #f5f5f4; /* tailwind stone 100 */
   --background: #1c1917; /* tailwind stone 950 */
-  --secondary: #57534e; /* tailwind stone 600 */
 }
 
 .text-gradient {
