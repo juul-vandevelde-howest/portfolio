@@ -24,9 +24,6 @@ function Header() {
       <nav className="hidden w-1/2 flex-row justify-between sm:flex">
         <ul className="md:text-md flex flex-row font-medium sm:gap-5 md:gap-8 lg:text-lg xl:text-xl">
           <li className="hover:underline">
-            <a href="#about">About</a>
-          </li>
-          <li className="hover:underline">
             <a href="#skills">Skills</a>
           </li>
           <li className="hover:underline">
@@ -34,6 +31,9 @@ function Header() {
           </li>
           <li className="hover:underline">
             <a href="#reviews">Reviews</a>
+          </li>
+          <li className="hover:underline">
+            <a href="#contact">Contact</a>
           </li>
         </ul>
         <button onClick={switchTheme} aria-label="Toggle Dark/Light Mode">
