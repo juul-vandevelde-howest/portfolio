@@ -6,7 +6,7 @@ Welcome to the GitHub repository of my personal portfolio!
 
 ## 🌐 Live Version
 
-You can visit the live version of my portfolio here: [Juul's Portfolio](https://vandeveldejuul.netlify.app/)
+You can visit the live version of my portfolio here: [my portfolio](https://vandeveldejuul.netlify.app/)
 
 ## 🛠️ Built With
 
