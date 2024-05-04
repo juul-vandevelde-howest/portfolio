@@ -25,6 +25,7 @@ function Work({
           src={src}
           alt={alt}
           className="w-full transition duration-500 hover:scale-110"
+          placeholder='blur'
         />
       </div>
       <div className={`${mirror ? 'text-right' : ''}`}>

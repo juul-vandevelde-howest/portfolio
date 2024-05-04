@@ -49,6 +49,7 @@ function Skills() {
             src={currentSkill ? currentSkill.image : dog}
             alt="A dog with glasses doing work on an ipad"
             className="mb-2"
+            placeholder="blur"
           />
           <span className="text-nowrap uppercase italic tracking-widest lg:text-lg xl:text-2xl">
             {currentSkill
