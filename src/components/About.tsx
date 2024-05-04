@@ -39,6 +39,7 @@ function About() {
         alt="Picture of Juul Van de Velde working in a bakery"
         priority={true}
         className="w-full object-cover"
+        placeholder="blur"
       />
     </section>
   )
