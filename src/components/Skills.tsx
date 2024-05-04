@@ -50,7 +50,6 @@ function Skills() {
               alt={skill.alt}
               className={`mb-2 ${currentHover === skill.name ? 'block' : 'hidden'}`}
               placeholder="blur"
-              priority={true}
             />
           ))}
           <Image
