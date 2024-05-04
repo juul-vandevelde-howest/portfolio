@@ -6,7 +6,7 @@ import Section from './Section'
 import UIUX from '../../public/assets/ui-design.jpg'
 import dog from '../../public/assets/doggo.jpg'
 import frontend from '../../public/assets/frontend.jpg'
-import backend from '../../public/assets/backend.png'
+import backend from '../../public/assets/backend.jpg'
 import flutter from '../../public/assets/flutter.jpg'
 
 function Skills() {
@@ -58,7 +58,6 @@ function Skills() {
             alt="A dog with glasses doing work on an ipad"
             className={`mb-2 ${currentHover ? 'hidden' : 'block'}`}
             placeholder="blur"
-            
           />
           <span className="text-nowrap uppercase italic tracking-widest lg:text-lg xl:text-2xl">
             {currentHover

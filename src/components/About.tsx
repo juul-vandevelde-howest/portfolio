@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import foldImage from '../../public/assets/juul.png'
+import foldImage from '../../public/assets/juul.jpg'
 
 function About() {
   return (
