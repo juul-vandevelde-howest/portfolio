@@ -58,6 +58,7 @@ function Skills() {
             alt="A dog with glasses doing work on an ipad"
             className={`mb-2 ${currentHover ? 'hidden' : 'block'}`}
             placeholder="blur"
+            
           />
           <span className="text-nowrap uppercase italic tracking-widest lg:text-lg xl:text-2xl">
             {currentHover
