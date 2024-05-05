@@ -2,19 +2,53 @@
 
 import { Moon, Sun } from '@phosphor-icons/react'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Header() {
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const [isDarkTheme, setIsDarkTheme] = useState(() => {
+    const theme = localStorage.getItem('theme')
+    if (theme) {
+      return theme === 'dark'
+    } else if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      return true
+    }
+    return false
+  })
+
+  useEffect(() => {
+    const theme = localStorage.getItem('theme')
+    if (theme) {
+      document.documentElement.classList.add(theme)
+      setIsDarkTheme(theme === 'dark')
+    } else if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      document.documentElement.classList.add('dark')
+      setIsDarkTheme(true)
+    }
+  }, [])
 
   function switchTheme() {
     const element = document.documentElement
-    element.classList.toggle('dark')
-    setIsDarkTheme(!isDarkTheme)
+    if (element.classList.contains('dark')) {
+      element.classList.remove('dark')
+      element.classList.add('light')
+      localStorage.setItem('theme', 'light')
+      setIsDarkTheme(false)
+    } else {
+      element.classList.remove('light')
+      element.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+      setIsDarkTheme(true)
+    }
   }
 
   return (
-    <header className="xs:pt-7 flex flex-row items-center pt-4 sm:pt-10">
+    <header className="flex flex-row items-center pt-4 xs:pt-7 sm:pt-10">
       <Link
         href={'/'}
         className="w-3/4 font-bold sm:w-1/2 md:text-2xl lg:text-3xl xl:text-4xl"
