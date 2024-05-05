@@ -5,38 +5,45 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 function Header() {
-  const getInitialTheme = () => {
-    const localTheme = window.localStorage.getItem('theme')
-    if (localTheme) {
-      return localTheme === 'dark'
-    } else if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      return true
-    } else {
-      return false
-    }
-  }
-
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean | null>(
-    getInitialTheme,
-  )
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean | null>(null)
 
   const switchTheme = () => {
     setIsDarkTheme(!isDarkTheme)
   }
 
   useEffect(() => {
+    const getInitialTheme = () => {
+      if (typeof window !== 'undefined') {
+        const localTheme = window.localStorage.getItem('theme')
+        if (localTheme) {
+          return localTheme === 'dark'
+        } else if (
+          window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+        ) {
+          return true
+        }
+      }
+      return false
+    }
+
+    setIsDarkTheme(getInitialTheme)
+  }, [])
+
+  useEffect(() => {
     if (isDarkTheme === null) return
     if (isDarkTheme) {
       document.documentElement.classList.add('dark')
       document.documentElement.classList.remove('light')
-      window.localStorage.setItem('theme', 'dark')
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('theme', 'dark')
+      }
     } else {
       document.documentElement.classList.add('light')
       document.documentElement.classList.remove('dark')
-      window.localStorage.setItem('theme', 'light')
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem('theme', 'light')
+      }
     }
   }, [isDarkTheme])
 
