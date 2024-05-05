@@ -3,17 +3,20 @@
 import { ArrowLeft, ArrowRight } from '@phosphor-icons/react'
 import Section from './Section'
 import { useState } from 'react'
+import Link from 'next/link'
 
 function Reviews() {
   interface Review {
     text: string
     author: string
+    link?: string
   }
 
   const reviews: Review[] = [
     {
       text: 'For our new website, we had contacted Juul Van de Velde. He sensed perfectly what we wanted and quickly came up with a beautiful design. For us it was important that the customer can clearly see that we deliver a premium product and that feeling had to be reflected in the website. No maze but simplicity and a clear message, if you want a heat pump you have to come to us 😊 In this he succeeded very well. People are finding their way to our product and the new site has given an extra boost to our sales.',
       author: 'Ecoterm WP',
+      link: 'https://ecotermwp.be',
     },
     {
       text: 'Juul is the ideal help in building your website. He creates calm and confidence. He brings your message to its essence. In all simplicity, pure, clear and contemporary. He is a professional in optimizing, taking security into account.',
@@ -44,9 +47,20 @@ function Reviews() {
           <div className="pb-5 sm:pb-8 md:pb-9 md:text-base lg:pb-10 lg:text-lg xl:pb-12 xl:text-xl">
             {reviews[currentIndex].text}
           </div>
-          <div className="text-lg italic md:text-xl lg:text-2xl xl:text-3xl">
-            {reviews[currentIndex].author}
-          </div>
+          {reviews[currentIndex].link ? (
+            <Link
+              href={reviews[currentIndex].link ?? ''}
+              rel="noopener noreferrer"
+              className="italic hover:underline xs:text-base md:text-lg lg:text-xl xl:text-2xl"
+              target="_blank"
+            >
+              {reviews[currentIndex].author}
+            </Link>
+          ) : (
+            <div className="italic md:text-lg lg:text-xl xl:text-2xl">
+              {reviews[currentIndex].author}
+            </div>
+          )}
         </div>
         <div className="flex w-5/12 flex-col justify-between">
           <div className="hidden border-2 border-foreground p-8 sm:block">
