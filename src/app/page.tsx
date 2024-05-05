@@ -1,10 +1,11 @@
-import About from '@/components/About'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
+import dynamic from 'next/dynamic'
 import Header from '@/components/Header'
-import Reviews from '@/components/Reviews'
-import Skills from '@/components/Skills'
-import Works from '@/components/Works'
+import About from '@/components/About'
+const Skills = dynamic(() => import('@/components/Skills'), { ssr: true })
+const Works = dynamic(() => import('@/components/Works'), { ssr: true })
+const Reviews = dynamic(() => import('@/components/Reviews'), { ssr: true })
+const Contact = dynamic(() => import('@/components/Contact'), { ssr: true })
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: true })
 
 export default function Home() {
   return (
