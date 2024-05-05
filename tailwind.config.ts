@@ -11,10 +11,11 @@ const config: Config = {
       screens: {
         fold: '290px',
         xxs: '326px',
+        xs: '520px',
         sm: '750px',
-        md: '910px',
+        md: '920px',
         lg: '1075px',
-        xl: '1320px',
+        xl: '1400px',
       },
       colors: {
         foreground: 'var(--foreground)',

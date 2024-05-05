@@ -30,7 +30,7 @@ function Work({
       </div>
       <div className={`${mirror ? 'sm:text-right' : ''}`}>
         <div
-          className="font-bold leading-tight pb-1 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:pb-2 xl:text-6xl"
+          className="font-bold leading-tight pb-1 text-2xl xs:text-3xl md:text-4xl lg:text-5xl xl:pb-2 xl:text-6xl"
           dangerouslySetInnerHTML={{
             __html: title.replace(/<br\s*\/?>/gi, '<br />'),
           }}
@@ -41,7 +41,7 @@ function Work({
         <Link
           href={link}
           rel="noopener noreferrer"
-          className="font-bold hover:underline sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+          className="font-bold hover:underline xs:text-base md:text-lg lg:text-xl xl:text-2xl"
           target="_blank"
         >
           visit repository -&gt;

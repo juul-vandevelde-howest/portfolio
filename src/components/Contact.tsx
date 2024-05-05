@@ -63,38 +63,46 @@ function Contact() {
   }, [animate])
 
   return (
-    <div
-      id="contact"
-      ref={slider}
-      className={`flex cursor-pointer overflow-hidden whitespace-nowrap font-bold italic text-4xl mb-14 sm:mb-24 sm:text-5xl md:mb-28 md:text-6xl lg:mb-32 lg:text-7xl xl:mb-40 xl:text-8xl ${isHovered && 'justify-center'}`}
-      onMouseEnter={() => {
-        handleMouseEnter()
-      }}
-      onMouseLeave={() => {
-        handleMouseLeave()
-      }}
-    >
-      {!isHovered ? (
-        <>
-          <p ref={firstText} className="m-0 inline-block pr-8 uppercase">
-            reach out -
-          </p>
-          <p ref={secondText} className="m-0 inline-block pr-8 uppercase">
-            reach out -
-          </p>
-          <p ref={thirdText} className="m-0 inline-block pr-8 uppercase">
-            reach out -
-          </p>
-          <p ref={fourthText} className="m-0 inline-block pr-8 uppercase">
-            reach out -
-          </p>
-        </>
-      ) : (
-        <button className="w-full uppercase italic" onClick={handleClick}>
-          {isCopied ? 'email copied :)' : 'click to copy email'}
-        </button>
-      )}
-    </div>
+    <>
+      <div
+        id="contact"
+        ref={slider}
+        className={`flex cursor-pointer overflow-hidden whitespace-nowrap text-4xl font-bold italic sm:text-5xl md:text-6xl  lg:text-7xl xl:text-8xl ${isHovered && 'justify-center'}`}
+        onMouseEnter={() => {
+          handleMouseEnter()
+        }}
+        onMouseLeave={() => {
+          handleMouseLeave()
+        }}
+      >
+        {!isHovered ? (
+          <>
+            <p ref={firstText} className="m-0 inline-block pr-8 uppercase">
+              reach out -
+            </p>
+            <p ref={secondText} className="m-0 inline-block pr-8 uppercase">
+              reach out -
+            </p>
+            <p ref={thirdText} className="m-0 inline-block pr-8 uppercase">
+              reach out -
+            </p>
+            <p ref={fourthText} className="m-0 inline-block pr-8 uppercase">
+              reach out -
+            </p>
+          </>
+        ) : (
+          <button
+            className="xxs:text-2xl xs:text-4xl w-full text-xl uppercase italic sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+            onClick={handleClick}
+          >
+            {isCopied ? 'email copied :)' : 'click to copy email'}
+          </button>
+        )}
+      </div>
+      <div className="xxs:text-base mb-14 pt-2 text-sm sm:mb-24 md:mb-28 lg:mb-32 xl:mb-40">
+        PS: HOVER OVER THE MOVING TEXT
+      </div>
+    </>
   )
 }
 

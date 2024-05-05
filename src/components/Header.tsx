@@ -14,7 +14,7 @@ function Header() {
   }
 
   return (
-    <header className="flex flex-row items-center pt-4 sm:pt-10">
+    <header className="xs:pt-7 flex flex-row items-center pt-4 sm:pt-10">
       <Link
         href={'/'}
         className="w-3/4 font-bold sm:w-1/2 md:text-2xl lg:text-3xl xl:text-4xl"
