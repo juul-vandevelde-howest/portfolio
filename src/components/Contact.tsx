@@ -92,15 +92,18 @@ function Contact() {
           </>
         ) : (
           <button
-            className="xxs:text-2xl xs:text-4xl w-full text-xl uppercase italic sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+            className="w-full text-xl uppercase italic xxs:text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
             onClick={handleClick}
           >
             {isCopied ? 'email copied :)' : 'click to copy email'}
           </button>
         )}
       </div>
-      <div className="xxs:text-base mb-14 pt-2 text-sm sm:mb-24 md:mb-28 lg:mb-32 xl:mb-40">
+      <div className="mb-14 hidden pt-2 text-sm xxs:text-base sm:mb-24 sm:block md:mb-28 lg:mb-32 xl:mb-40">
         PS: HOVER OVER THE MOVING TEXT
+      </div>
+      <div className="mb-14 pt-2 text-sm xxs:text-base sm:mb-24 sm:hidden md:mb-28 lg:mb-32 xl:mb-40">
+        PS: CLICK ON THE MOVING TEXT
       </div>
     </>
   )
