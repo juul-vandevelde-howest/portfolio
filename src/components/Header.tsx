@@ -6,29 +6,31 @@ import { useEffect, useState } from 'react'
 
 function Header() {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
-    const theme = localStorage.getItem('theme')
-    if (theme) {
-      return theme === 'dark'
-    } else if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      return true
+    if (typeof window !== 'undefined') {
+      const theme = localStorage.getItem('theme')
+      if (theme) {
+        return theme === 'dark'
+      } else if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        return true
+      }
     }
     return false
   })
 
   useEffect(() => {
-    const theme = localStorage.getItem('theme')
-    if (theme) {
-      document.documentElement.classList.add(theme)
-      setIsDarkTheme(theme === 'dark')
-    } else if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      document.documentElement.classList.add('dark')
-      setIsDarkTheme(true)
+    if (typeof window !== 'undefined') {
+      const theme = localStorage.getItem('theme')
+      if (theme) {
+        document.documentElement.classList.add(theme)
+      } else if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        document.documentElement.classList.add('dark')
+      }
     }
   }, [])
 
