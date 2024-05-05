@@ -41,8 +41,8 @@ function Skills() {
 
   return (
     <Section title="what i do" id="skills">
-      <div className="flex flex-row items-center sm:my-12 sm:gap-9 md:my-14 md:gap-14 lg:my-16 lg:gap-16 xl:my-20 xl:gap-20">
-        <div className="w-1/2">
+      <div className="flex flex-col my-5 gap-5 sm:my-12 sm:flex-row sm:items-center sm:gap-9 md:my-14 md:gap-14 lg:my-16 lg:gap-16 xl:my-20 xl:gap-20">
+        <div className="sm:w-1/2">
           {skills.map(skill => (
             <Image
               key={skill.name}
@@ -50,6 +50,8 @@ function Skills() {
               alt={skill.alt}
               className={`mb-2 ${currentHover === skill.name ? 'block' : 'hidden'}`}
               placeholder="blur"
+              priority={true}
+              // TODO: replace priority with a function that checks if the image is in the viewport to improve performance
             />
           ))}
           <Image
@@ -58,13 +60,13 @@ function Skills() {
             className={`mb-2 ${currentHover ? 'hidden' : 'block'}`}
             placeholder="blur"
           />
-          <span className="text-nowrap uppercase italic tracking-widest lg:text-lg xl:text-2xl">
+          <span className="uppercase italic tracking-widest sm:text-nowrap lg:text-lg xl:text-2xl">
             {currentHover
               ? skills.find(skill => skill.name === currentHover)?.span
               : 'hover over a topic to see my skills'}
           </span>
         </div>
-        <ul className="cursor-default font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <ul className="cursor-default font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           {skills.map(skill => (
             <li
               key={skill.name}

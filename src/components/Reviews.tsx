@@ -39,17 +39,17 @@ function Reviews() {
 
   return (
     <Section title="what<br />others say" id="reviews">
-      <div className="flex flex-row sm:mb-24 sm:mt-12 sm:gap-6 md:mb-28 md:mt-14 md:gap-8 lg:mb-32 lg:mt-16 lg:gap-10 xl:mb-40 xl:mt-20 xl:gap-12">
-        <div className="w-7/12 border-2 border-foreground sm:p-10 md:p-11 lg:p-12 xl:p-16">
-          <div className="sm:pb-8 md:pb-9 md:text-base lg:pb-10 lg:text-lg xl:pb-12 xl:text-xl">
+      <div className="mb-10 mt-5 flex flex-col sm:mb-24 sm:mt-12 sm:flex-row sm:gap-6 md:mb-28 md:mt-14 md:gap-8 lg:mb-32 lg:mt-16 lg:gap-10 xl:mb-40 xl:mt-20 xl:gap-12">
+        <div className="border-2 border-foreground p-5 sm:w-7/12 sm:p-10 md:p-11 lg:p-12 xl:p-16">
+          <div className="pb-5 sm:pb-8 md:pb-9 md:text-base lg:pb-10 lg:text-lg xl:pb-12 xl:text-xl">
             {reviews[currentIndex].text}
           </div>
-          <div className="italic sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+          <div className="text-lg italic md:text-xl lg:text-2xl xl:text-3xl">
             {reviews[currentIndex].author}
           </div>
         </div>
         <div className="flex w-5/12 flex-col justify-between">
-          <div className="border-2 border-foreground p-8">
+          <div className="hidden border-2 border-foreground p-8 sm:block">
             <div className="bg-gradient-to-b from-foreground to-60% bg-clip-text pb-12 text-transparent">
               {reviews[(currentIndex + 1) % reviews.length].text
                 .slice(0, 100)
