@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 :root {
-  @media (prefers-color-scheme: light) {
-    --foreground: #0c0a09; /* tailwind stone 950 */
-    --background: #fafaf9; /* tailwind stone 50 */
-  }
+  --foreground: #0c0a09; /* tailwind stone 950 */
+  --background: #fafaf9; /* tailwind stone 50 */
 
   @media (prefers-color-scheme: dark) {
     --foreground: #f5f5f4; /* tailwind stone 100 */

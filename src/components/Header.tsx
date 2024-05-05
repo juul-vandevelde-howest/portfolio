@@ -5,49 +5,40 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 function Header() {
-  const [isDarkTheme, setIsDarkTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const theme = localStorage.getItem('theme')
-      if (theme) {
-        return theme === 'dark'
-      } else if (
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      ) {
-        return true
-      }
-    }
-    return false
-  })
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const theme = localStorage.getItem('theme')
-      if (theme) {
-        document.documentElement.classList.add(theme)
-      } else if (
-        window.matchMedia &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches
-      ) {
-        document.documentElement.classList.add('dark')
-      }
-    }
-  }, [])
-
-  function switchTheme() {
-    const element = document.documentElement
-    if (element.classList.contains('dark')) {
-      element.classList.remove('dark')
-      element.classList.add('light')
-      localStorage.setItem('theme', 'light')
-      setIsDarkTheme(false)
+  const getInitialTheme = () => {
+    const localTheme = window.localStorage.getItem('theme')
+    if (localTheme) {
+      return localTheme === 'dark'
+    } else if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      return true
     } else {
-      element.classList.remove('light')
-      element.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-      setIsDarkTheme(true)
+      return false
     }
   }
+
+  const [isDarkTheme, setIsDarkTheme] = useState<boolean | null>(
+    getInitialTheme,
+  )
+
+  const switchTheme = () => {
+    setIsDarkTheme(!isDarkTheme)
+  }
+
+  useEffect(() => {
+    if (isDarkTheme === null) return
+    if (isDarkTheme) {
+      document.documentElement.classList.add('dark')
+      document.documentElement.classList.remove('light')
+      window.localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.add('light')
+      document.documentElement.classList.remove('dark')
+      window.localStorage.setItem('theme', 'light')
+    }
+  }, [isDarkTheme])
 
   return (
     <header className="flex flex-row items-center pt-4 xs:pt-7 sm:pt-10">
