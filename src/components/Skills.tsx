@@ -16,13 +16,13 @@ function Skills() {
     {
       name: 'UX/UI Design',
       image: UIUX,
-      span: 'figma / adobe xd / wireframing / testing',
+      span: 'figma / wireframing / testing',
       alt: 'pastel colored UX wireframes',
     },
     {
       name: 'Frontend Development',
       image: frontend,
-      span: 'html / css / typescript / react / next.js',
+      span: 'html / css / ts / react / next.js',
       alt: 'A laptop showing a code editor with a website design',
     },
     {
@@ -60,17 +60,22 @@ function Skills() {
             className={`mb-2 ${currentHover ? 'hidden' : 'block'}`}
             placeholder="blur"
           />
-          <span className="uppercase italic tracking-widest sm:text-nowrap lg:text-lg xl:text-2xl">
+          <span className="hidden uppercase italic tracking-widest sm:block sm:text-nowrap lg:text-lg xl:text-2xl">
             {currentHover
               ? skills.find(skill => skill.name === currentHover)?.span
               : 'hover over a topic to see my skills'}
           </span>
+          <span className="uppercase italic tracking-widest sm:hidden sm:text-nowrap lg:text-lg xl:text-2xl">
+            {currentHover
+              ? skills.find(skill => skill.name === currentHover)?.span
+              : 'select a topic to see my skills'}
+          </span>
         </div>
-        <ul className="xs:text-3xl cursor-default text-2xl font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+        <ul className="cursor-default text-2xl font-bold xs:text-3xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           {skills.map(skill => (
             <li
               key={skill.name}
-              className="xs:py-2 py-1 text-stone-500 hover:text-foreground md:py-3 lg:py-4"
+              className="py-1 text-stone-500 hover:text-foreground xs:py-2 md:py-3 lg:py-4"
               onMouseEnter={() => setCurrentHover(skill.name)}
               onMouseLeave={() => setCurrentHover(null)}
               onClick={() => setCurrentHover(skill.name)}
