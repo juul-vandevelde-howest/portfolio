@@ -5,7 +5,7 @@ function About() {
   return (
     <section
       id="about"
-      className="pt-10 sm:relative sm:grid sm:grid-cols-2 md:mb-14 md:pt-20 lg:mb-16 xl:mb-20"
+      className="mb-10 pt-10 sm:relative sm:grid sm:grid-cols-2 md:mb-14 md:pt-20 lg:mb-16 xl:mb-20"
     >
       <div className="flex flex-col justify-between sm:mr-8">
         <article className="flex flex-col gap-8 font-light sm:gap-10 md:gap-14 md:text-lg lg:gap-16 lg:text-xl xl:gap-20 xl:text-2xl">
